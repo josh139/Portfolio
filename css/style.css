@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
-    color: #868F9B;
+    color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -179,7 +179,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 /* --  Buttons  -- */
 
-.main-btn, .white-btn, .outline-btn {
+.main-btn, .white-btn, .outline-btn{
     display: inline-block;
     padding: 10px 35px;
     margin: 3px;
@@ -190,6 +190,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .main-btn {
+    background: #6195FF;
+    color: #FFF;
+}
+
+.spec-btn {
+    padding: 0px 5px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
     background: #6195FF;
     color: #FFF;
 }
@@ -205,7 +215,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     border-color: #6195FF;
 }
 
-.main-btn:hover, .white-btn:hover, .outline-btn:hover {
+.main-btn:hover, .white-btn:hover, .outline-btn:hover, .spec-btn:hover {
     opacity: 0.8;
 }
 
@@ -635,134 +645,60 @@ header {
     color: white;
 }
 
-
-/*------------------------------------*\
-	Portfolio
-\*------------------------------------*/
-
-.work {
-    position: relative;
-    padding: 20px;
+.about:hover p {
+    color: white;
 }
 
-.work>img {
+/*------------------------------------*\
+	Education
+\*------------------------------------*/
+
+.educationa {
+	text-align: center;
+	font-size:25px;
+}
+
+.educationb {
+	padding-top: 20px;
+	text-align: center;
+	font-size:25px;
+}
+
+#table {
+  font-family: Arial;
+  border-collapse: collapse;
   width: 100%;
 }
 
-.work .overlay {
-    background: #1C1D21;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+#table td, #table th {
+  border: 1px solid black;
+  padding: 8px;
 }
 
-.work:hover .overlay {
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    opacity: 0.8;
-}
+#table tr:nth-child(even){background-color: #f2f2f2;}
 
-.work .work-content {
-    position: absolute;
-    left: 25px;
-    right: 25px;
-    top: 50%;
-    text-align: center;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+#table tr:hover {background-color: #ddd;}
 
-.work .work-content h3 {
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0;
-    color: #FFF;
-    margin-bottom: 10px;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
 }
-
-.work:hover .work-content h3 {
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-}
-
-.work .work-content span {
-    display: block;
-    text-transform: uppercase;
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0;
-    color: #6195FF;
-    margin-bottom: 5px;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-}
-
-.work:hover .work-content span {
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-}
-
-.work .work-link {
-    text-align: center;
-    margin-top: 20px;
-    opacity: 0;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-}
-
-.work .work-link a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #6195FF;
-    color: #FFF;
-    line-height: 50px;
-    text-align: center;
-}
-
-.work:hover .work-link {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-    opacity: 1;
-}
-
 
 /*------------------------------------*\
-	Services
+	Education
 \*------------------------------------*/
 
-.service {
+.education {
     position: relative;
     padding: 40px 20px 40px 70px;
     margin: 15px 0px;
     border: 1px solid #EEE;
 }
 
-.service i {
+.education i {
     position: absolute;
     left: 20px;
     text-align: center;
@@ -771,9 +707,9 @@ header {
     border-radius: 50%;
 }
 
-.service:after {
+.education:after {
     content: "";
-    background-color: #1C1D21;
+    background-color: black;
     position: absolute;
     left: 0;
     top: 0;
@@ -784,16 +720,20 @@ header {
     transition: 0.2s width;
 }
 
-.service:hover:after {
+.education:hover:after {
     width: 100%;
 }
 
-.service h3 {
+.education h3 {
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
 }
 
-.service:hover h3 {
+.education:hover h3 {
+    color: #fff;
+}
+
+.education:hover p {
     color: #fff;
 }
 
@@ -1005,7 +945,7 @@ header {
   		font-size:31.5px;
 	}
 
-  .main-btn , .default-btn , .outline-btn , .white-btn  {
+  .main-btn , .default-btn , .outline-btn , .white-btn, .spec-btn  {
   		padding: 8px 22px;
   		font-size:14px;
 	}
